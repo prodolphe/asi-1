@@ -8,13 +8,6 @@
           <g-link to="/">
             <figure class="">
               <g-image
-                v-if="subdomain == 'benin'"
-                class="studbrand"
-                src="~/assets/benin-logo.svg"
-                fit="inside"
-              />
-              <g-image
-                v-else
                 class="studbrand"
                 src="~/assets/logo-990.svg"
                 fit="inside"
@@ -30,13 +23,6 @@
           <g-link to="/">
             <figure class="">
               <g-image
-                v-if="subdomain == 'benin'"
-                class="studbrand"
-                src="~/assets/benin-logo.svg"
-                fit="inside"
-              />
-              <g-image
-                v-else
                 class="studbrand"
                 src="~/assets/logo-990.svg"
                 fit="inside"
