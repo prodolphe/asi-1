@@ -817,7 +817,7 @@ export default {
 }
 
 .figure-blue {
-  background-color: $blue-studely;
+  background-color: $blue-asi;
 }
 
 .figure-green {
@@ -872,7 +872,7 @@ export default {
 }
 
 .slide-item {
-  border-color: $blue-studely !important;
+  border-color: $blue-asi !important;
 }
 .text-justify {
   text-align: justify;

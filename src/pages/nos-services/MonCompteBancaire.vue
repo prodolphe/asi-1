@@ -261,7 +261,7 @@ export default {
 }
 
 .is-bordered {
-  border-color: $blue-studely;
+  border-color: $blue-asi;
 }
 
 .padding {

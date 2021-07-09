@@ -240,7 +240,7 @@ export default {
   height: 35em;
 }
 .is-bordered {
-  border-color: $blue-studely;
+  border-color: $blue-asi;
 }
 
 .padding {

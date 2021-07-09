@@ -315,7 +315,7 @@ export default {
 @import "../variables.scss";
 
 .is-bordered {
-  border-color: $blue-studely;
+  border-color: $blue-asi;
 }
 
 .diapo {
@@ -345,7 +345,7 @@ export default {
 }
 
 .figcaption-blue {
-  background-color: $blue-studely;
+  background-color: $blue-asi;
 }
 
 .figcaption-red {

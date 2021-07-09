@@ -224,7 +224,7 @@ export default {
 }
 
 .bcarousel {
-  border-color: $blue-studely !important;
+  border-color: $blue-asi !important;
   border: solid;
 }
 </style>

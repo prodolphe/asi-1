@@ -1,116 +1,18 @@
 <template>
-  <footer id="footer" class="footer has-background-success has-text-white">
-    <div class="contain">
-      <div class="columns is-variable is-desktop has-text-white">
-        <div class="column is-3-desktop is-two-thirds-tablet is-offset-1">
-          <h3>Newsletter</h3>
-          <br />
-          <b-field>
-            <iframe
-              title="mailjet"
-              class="mj-w-res-iframe bfieldStyle"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-              src="https://app.mailjet.com/widget/iframe/2l0Z/F86"
-              width="100%"
-              height="220px"
-            ></iframe>
-          </b-field>
-          <br />
-          <h6>
-            <strong :class="bclass" :v-show="message">{{ message }}</strong>
-          </h6>
-          Suivez-nous &nbsp;
-          <a href="https://www.facebook.com/StudelyFrance/">
-            <b-icon
-              pack="fab"
-              icon="facebook"
-              size="is-medium"
-              type="is-white"
-            /> </a
-          >&nbsp;
-          <a href="https://www.instagram.com/studelyofficiel/">
-            <b-icon
-              pack="fab"
-              icon="instagram"
-              size="is-medium"
-              type="is-white"
-            /> </a
-          >&nbsp;
-          <a href="https://twitter.com/studelyofficiel">
-            <b-icon
-              pack="fab"
-              icon="twitter"
-              size="is-medium"
-              type="is-white"
-            />
-          </a>
-          &nbsp;
-          <a href="https://www.linkedin.com/company/linkedindestudely">
-            <b-icon
-              pack="fab"
-              icon="linkedin"
-              size="is-medium"
-              type="is-white"
-            /> </a
-          >&nbsp;
-          <a href="https://www.youtube.com/channel/UCpd-GbAseIuTLtutXSy8dAA">
-            <b-icon
-              pack="fab"
-              icon="youtube"
-              size="is-medium"
-              type="is-white"
-            />
-          </a>
-          &nbsp;
-        </div>
-        <div class="column" style="padding-top: 3.3em">
-          <div class="columns is-variable is-centered">
-            <div class="column is-4 is-offset-1">
-              <ul>
-                <li>
-                  <g-link to="/qui-sommes-nous/">Qui sommes-nous?</g-link>
-                </li>
-                <li>
-                  <g-link to="/partenaires/">Devenir Partenaire</g-link>
-                </li>
-                <li>
-                  <g-link to="/service-client/">Contactez-nous</g-link>
-                </li>
-              </ul>
-            </div>
-            <div class="column is-4">
-              <ul>
-                <li>
-                  <g-link to="/on-recrute/">Carrières</g-link>
-                </li>
-                <li>
-                  <g-link to="/espace-documentaire"
-                    >Ressources documentaires</g-link
-                  >
-                </li>
-                <li>
-                  <g-link to="/">Plan du site</g-link>
-                </li>
-              </ul>
-            </div>
-            <div class="column is-4">
-              <ul>
-                <li>
-                  <g-link to="/faq/">FAQ</g-link>
-                </li>
-                <li>
-                  <g-link to="/mentions-legales/">Mentions légales</g-link>
-                </li>
-                <li>
-                  <g-link to="/cgu/">CGU</g-link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <footer class="footer">
+    <div class="content columns">
+      <div class="column">
+        <p>
+          2020©
+          <strong>ASI</strong> propulsé par
+          <a href="https://rintio.com">RINTIO</a>.
+        </p>
+      </div>
+      <div class="column">
+        <p class="has-text-right">
+          <a href="https://rintio.com">CGU</a>.
+          <a href="https://rintio.com">Mentions légales</a>.
+        </p>
       </div>
     </div>
   </footer>
@@ -229,11 +131,16 @@ export default {
 <style scoped lang="scss">
 @import "../variables.scss";
 
-a {
-  color: $white;
-  line-height: 2.5em;
+footer {
+  padding: 1rem;
 }
 
+a {
+  color: blue($color: #000000);
+  line-height: 2.5em;
+  padding: 1rem;
+}
+/*
 .footer {
   font-family: $family-sans-serif;
 }
@@ -247,7 +154,7 @@ a {
     position: fixed;
   }
 } */
-
+/*
 @media screen and (max-width: 1023px) {
   #footer {
     position: relative !important;
@@ -277,5 +184,5 @@ a {
   #footer {
     height: 53em;
   }
-}
+}*/
 </style>

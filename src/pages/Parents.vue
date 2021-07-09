@@ -173,7 +173,7 @@ export default {
   }
 }
 .is-bordered {
-  border-color: $blue-studely;
+  border-color: $blue-asi;
 }
 
 @media only screen and (min-width: 425px) and (max-width: 1920px) {
