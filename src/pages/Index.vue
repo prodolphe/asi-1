@@ -30,12 +30,13 @@
             </a>
           </p>
         </div>
-      </div>
-      <div>
+        <div>
         <p class="subtitle is-5 has-text-grey-lighter">
           Retrouvez les trois meilleurs résultats de votre recherche
         </p>
       </div>
+      </div>
+      
     </section>
   </Layout>
 </template>
