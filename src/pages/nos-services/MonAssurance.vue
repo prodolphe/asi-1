@@ -1159,7 +1159,7 @@ export default {
 }
 
 .is-bordered {
-  border-color: $blue-studely;
+  border-color: $blue-asi;
 }
 .is-active-service {
   background-image: url("./../../../static/service/assurance/fond-service.svg");

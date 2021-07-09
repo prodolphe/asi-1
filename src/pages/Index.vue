@@ -1,311 +1,41 @@
 <template>
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-
-    <section class="grid-services center-over-1920">
-      <div
-        class="columns is-vcentered is-centered is-multiline has-text-centered"
-      >
-        <div class="column is-12">
-          <b-carousel
-            :indicator="indicator"
-            :arrow="arrow"
-            :arrow-both="arrowBoth"
-            :arrow-hover="arrowHover"
-            :icon-pack="iconPack"
-            :icon-prev="iconPrev"
-            :icon-next="iconNext"
-            :icon-size="iconSize"
-            :autoplay="autoPlay"
-            :interval="10000"
-            :pause-hover="pauseHover"
+    <section class="section is-large bg-img mb-7">
+      <div class="subtitle">
+        <h1 class="title has-text-primary-light is-uppercase has-text-weight-light">Bienvenue sur</h1>
+        <p class="title is-2">
+          <strong class="has-text-primary-light"
+            >La plateforme des potentialités d’Afrique</strong
           >
-            <b-carousel-item v-for="(carousel, i) in carousel" :key="i">
-              <section
-                :class="`hero is-medium diapo has-text-white `"
-                :style="{
-                  backgroundImage: `url('${carousel.image.file.url}')`,
-                }"
-              >
-                <div class="hero-body has-text-left">
-                  <div class="columns is-multiline has-text-left">
-                    <div class="column is-8 is-offset-1">
-                      <h2
-                        class="title has-text-white"
-                        v-html="carousel.title"
-                      ></h2>
-                    </div>
-                    <br />
-                    <div
-                      class="column is-offset-1 is-half-desktop is-12-mobile content-24 content-16"
-                    >
-                      {{ carousel.description }}
-                    </div>
-                    <div
-                      class="column column is-offset-1 is-half-desktop is-12-mobile content-16"
-                      v-if="carousel.button.title"
-                    >
-                      <b-button
-                        tag="a"
-                        :href="carousel.button.link"
-                        type="is-success"
-                        class="button-service is-large"
-                      >
-                        <strong>{{ carousel.button.title }}</strong>
-                      </b-button>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </b-carousel-item>
-          </b-carousel>
+        </p>
+      </div>
+      <div>
+        <div class=" field has-addons has-addons-centered ">
+          <p class="control">
+            <span class="select is-large">
+              <select>
+                <option>Fintech</option>
+                <option>Agronomie</option>
+                <option>Elevage</option>
+              </select>
+            </span>
+          </p>
+          <p class="control">
+            <input class="input is-large" type="text" placeholder="Recherche" />
+          </p>
+          <p class="control">
+            <a class="button search-btn is-large">
+              <i class="fas fa-search"></i>
+            </a>
+          </p>
         </div>
       </div>
-      <!--tablet -->
-      <div
-        class="columns is-multiline is-centered is-mobile is-hidden-mobile is-hidden-desktop"
-      >
-        <div class="column is-10-desktop">
-          <div class="columns is-multiline is-centered is-gapless is-mobile">
-            <div class="column is-3-desktop is-4-mobile">
-              <div class="columns is-multiline is-centered">
-                <div class="column is-12 is-paddingless ligne1">
-                  <g-image class="ligne-3" src="~/assets/index/1e-ligne.svg" />
-                </div>
-              </div>
-            </div>
-            <div class="column is-1 is-4-mobile">
-              <div class="columns is-multiline is-vcentered">
-                <div class="column is-12"></div>
-              </div>
-            </div>
-            <div class="column is-3-desktop is-4-mobile is-paddingless">
-              <div class="columns is-multiline is-centered">
-                <div class="column is-12"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div>
+        <p class="subtitle is-5 has-text-grey-lighter">
+          Retrouvez les trois meilleurs résultats de votre recherche
+        </p>
       </div>
-      <!--desktop -->
-      <div class="columns is-multiline is-centered is-mobile is-hidden-touch">
-        <div class="column is-10-desktop">
-          <div class="columns is-multiline is-centered is-gapless is-mobile">
-            <div class="column is-3-desktop is-4-mobile">
-              <div class="columns is-multiline is-centered">
-                <div class="column is-12 is-paddingless ligne1">
-                  <g-image class="ligne-3" src="~/assets/index/1e-ligne.svg" />
-                </div>
-              </div>
-            </div>
-            <div class="column is-1 is-4-mobile">
-              <div class="columns is-multiline is-vcentered">
-                <div class="column is-12"></div>
-              </div>
-            </div>
-            <div class="column is-3-desktop is-4-mobile is-paddingless">
-              <div class="columns is-multiline is-centered">
-                <div class="column is-12"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <services :services="page.services" />
-
-    <section class="section has-text-centered is-centered">
-      <div class="columns is-multiline is-centered">
-        <div class="column is-12">
-          <h2 class="title has-text-primary">
-            {{ page.testimonialsSectionTitle }}
-          </h2>
-        </div>
-        <div class="column is-12 is-hidden-mobile"></div>
-        <div class="column is-12 is-hidden-mobile"></div>
-        <div class="column is-10-desktop is-12-mobile">
-          <div class="columns is-multiline is-centered">
-            <div class="column is-3-desktop is-12-mobile">
-              <div class="columns is-multiline is-centered">
-                <div class="column is-12 temoignage-etudiant">
-                  <figure class="image is-3by2">
-                    <iframe
-                      title="studely"
-                      class="has-ratio"
-                      :src="page.testimonials[0].url"
-                      allowfullscreen
-                    ></iframe>
-                  </figure>
-                </div>
-                <div class="column is-12">
-                  <h2 class="is-spaced has-text-primary">
-                    {{ page.testimonials[0].title }}
-                  </h2>
-                </div>
-                <div class="column is-12 content-16">
-                  {{ page.testimonials[0].description }}
-                </div>
-              </div>
-            </div>
-            <div class="column is-1 is-hidden-mobile">
-              <div class="columns is-multiline is-vcentered">
-                <div class="column is-12"></div>
-                <div class="column is-12"></div>
-                <div class="column is-12"></div>
-                <div class="column is-12"></div>
-                <div class="column is-12">
-                  <figure class="image">
-                    <g-image
-                      class="link-etu-parent"
-                      src="~/assets/index/ligne-etudiant-parent.svg"
-                      fit="inside"
-                    />
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3-desktop is-12-mobile">
-              <div class="columns is-multiline is-centered">
-                <div class="column is-12 temoignage-parent">
-                  <figure class="image is-3by2">
-                    <iframe
-                      title="témoignage"
-                      class="has-ratio"
-                      :src="page.testimonials[1].url"
-                      allowfullscreen
-                    ></iframe>
-                  </figure>
-                </div>
-                <div class="column is-12">
-                  <h2 class="is-spaced has-text-primary">
-                    {{ page.testimonials[1].title }}
-                  </h2>
-                </div>
-                <div class="column is-12 content-16">
-                  {{ page.testimonials[1].description }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container has-text-centered is-centered">
-      <h2 class="title has-text-primary">
-        {{ page.aboutSectionTitle }}
-        {{ about[0].country | Upper }}
-      </h2>
-      <br />
-      <br />
-      <Apropos :about="about[0]" :events="events" />
-    </section>
-
-    <section class="section container has-text-centered">
-      <h2 class="title has-text-primary">{{ page.statsSectionTitle }}</h2>
-      <br />
-      <br />
-      <div
-        class="columns is-multiline is-variable is-3 is-multiline is-centered is-mobile"
-      >
-        <div class="column is-6-mobile">
-          <g-image
-            :src="page.stats[0].image.file.url"
-            class="image-fit"
-            fit="inside"
-          />
-          <h2 class="title">{{ page.stats[0].title }}</h2>
-          <h3 class="subtitle" v-html="page.stats[0].description"></h3>
-        </div>
-        <div class="is-hidden-touch mt-6">
-          <g-image src="~/assets/index/1.png" fit="inside" />
-        </div>
-        <div class="column is-6-mobile">
-          <g-image
-            :src="page.stats[1].image.file.url"
-            class="image-fit"
-            fit="inside"
-          />
-          <h2 class="title">{{ page.stats[1].title }}</h2>
-          <h3 class="subtitle" v-html="page.stats[1].description"></h3>
-        </div>
-        <div class="is-hidden-touch mt-6">
-          <g-image src="~/assets/index/2.png" fit="inside" />
-        </div>
-        <div class="column is-6-mobile">
-          <g-image
-            :src="page.stats[2].image.file.url"
-            class="image-fit"
-            fit="inside"
-          />
-          <h2 class="title">{{ page.stats[2].title }}</h2>
-          <h3 class="subtitle" v-html="page.stats[2].description"></h3>
-        </div>
-        <div class="is-hidden-touch mt-6">
-          <g-image src="~/assets/index/3.png" fit="inside" />
-        </div>
-        <div class="column is-6-mobile">
-          <g-image
-            :src="page.stats[3].image.file.url"
-            class="image-fit"
-            fit="inside"
-          />
-          <h2 class="title">{{ page.stats[3].title }}</h2>
-          <h3 class="subtitle" v-html="page.stats[3].description"></h3>
-        </div>
-        <div class="is-hidden-touch mt-6">
-          <g-image src="~/assets/index/4.png" fit="inside" />
-        </div>
-        <div class="column is-6-mobile">
-          <g-image
-            :src="page.stats[4].image.file.url"
-            class="image-fit"
-            fit="inside"
-          />
-          <h2 class="title">{{ page.stats[4].title }}</h2>
-          <h3 class="subtitle" v-html="page.stats[4].description"></h3>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container has-text-centered">
-      <h2 class="title has-text-primary">
-        {{ page.partnersSectionTitle }}
-      </h2>
-      <br />
-      <br />
-      <Partner :partners="page.partners.images" />
-    </section>
-
-    <section class="section container has-text-centered">
-      <h2 class="title has-text-primary">{{ page.feedsSectionTitle }}</h2>
-
-      <b-carousel
-        :icon-pack="iconPack"
-        :icon-size="iconSize"
-        :pause-hover="pauseHover"
-      >
-        <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
-          <section :class="`hero is-medium`">
-            <section class="section container">
-              <div class="columns is-desktop is-vcentered">
-                <div class="column is-3">
-                  <g-image :src="carousel.image.file.url" />
-                </div>
-                <div class="column">
-                  <h2 class="subtitle">
-                    <blockquote>"{{ carousel.description }}"</blockquote>
-                  </h2>
-                  <span class="signature is-pulled-right">
-                    {{ carousel.source }}
-                  </span>
-                </div>
-              </div>
-            </section>
-          </section>
-        </b-carousel-item>
-      </b-carousel>
     </section>
   </Layout>
 </template>
@@ -610,6 +340,24 @@ export default {
 </script>
 
 <style lang="scss">
+.search-btn {
+  background-color: #ff9b26;
+  color: #fff;
+}
+
+.bg-img {
+  background-image: url("./../assets/bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #FBFDFF;
+}
+
+white-text {
+  color: #fff !important;
+}
+/*
 .is-spaced {
   font-size: 20px;
   font-weight: 600;
@@ -642,5 +390,5 @@ export default {
 .image-fit {
   width: 80px;
   height: 80px;
-}
+}*/
 </style>

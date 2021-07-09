@@ -939,7 +939,7 @@ figure,
 }
 
 .fig-title {
-  color: $blue-studely;
+  color: $blue-asi;
   font-size: 24px;
   text-align: center;
   position: relative;
@@ -985,7 +985,7 @@ figure:hover + .service-picto {
 }
 
 .figcaption-blue {
-  background-color: $blue-studely;
+  background-color: $blue-asi;
 }
 
 .figcaption-red {

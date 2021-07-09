@@ -293,7 +293,7 @@ export default {
 @import "../variables.scss";
 
 .is-bordered {
-  border-color: $blue-studely;
+  border-color: $blue-asi;
   border-radius: 20px;
 }
 </style>

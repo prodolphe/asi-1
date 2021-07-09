@@ -647,7 +647,7 @@ a {
 }
 
 a:hover {
-  color: $blue-studely;
+  color: $blue-asi;
 }
 
 .excerpt {
@@ -666,7 +666,7 @@ a:hover {
 }
 
 .is-bordered {
-  border-color: $blue-studely;
+  border-color: $blue-asi;
 }
 
 .padding {
